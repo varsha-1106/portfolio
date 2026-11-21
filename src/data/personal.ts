@@ -12,6 +12,7 @@ export const personalData = {
   shortBio:
     "I'm an Artificial Intelligence and Machine Learning engineering student exploring technology, developing practical projects, and continuously strengthening my technical skills.",
   location: "Hosur, Tamil Nadu, India",
+  phone: "+91 9363750548",
   availability: "Open to learning opportunities, internships and collaborations.",
   statusBadge: "Available for Internships",
   email: "varshatamil1106@gmail.com",
@@ -47,6 +48,7 @@ export const personalData = {
     location: "Anekal, Bangalore",
     batch: "2024–2028",
     currentSemester: "5th Semester",
+    cgpa: "7.3",
     expectedGraduation: "2028",
     focusAreas: [
       "Artificial Intelligence Principles",
@@ -63,7 +65,8 @@ export const personalData = {
       title: "Programming & Data",
       description: "Core languages and query tools I am actively developing proficiency in.",
       skills: [
-        { name: "Python", level: "Basic / Building Fundamentals", context: "Syntax, logic building, data handling, scripting" },
+        { name: "Python", level: "Beginner / Active Practice", context: "Syntax, logic building, data handling, scripting" },
+        { name: "Java", level: "Beginner", context: "Object-oriented programming concepts & syntax" },
         { name: "SQL", level: "Basic / Active Practice", context: "Relational database queries, filtering, joins" }
       ]
     },
@@ -71,7 +74,7 @@ export const personalData = {
       title: "Web Technologies",
       description: "Frontend foundations for presenting interfaces and connecting AI models.",
       skills: [
-        { name: "HTML", level: "Basic", context: "Semantic web page structure, forms, and layout hierarchy" }
+        { name: "HTML & CSS", level: "Basic", context: "Semantic page structure, responsive styling, and layout design" }
       ]
     },
     {

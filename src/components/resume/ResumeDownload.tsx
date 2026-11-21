@@ -56,7 +56,6 @@ export default function ResumeDownload() {
               <a
                 href="/resume.pdf"
                 download="Varsha_T_Resume.pdf"
-                onClick={handleDownloadClick}
                 className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-primary text-[#0A0A0A] font-semibold text-xs sm:text-sm hover:bg-white transition-all shadow-lg hover:scale-105"
               >
                 <Download className="w-4 h-4 text-[#4E85BF]" />
@@ -64,10 +63,19 @@ export default function ResumeDownload() {
               </a>
 
               <a
-                href={`mailto:${personalData.email}?subject=Resume%20Inquiry%20-%20Varsha%20T.`}
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm text-primary transition-colors"
+                href="/Varsha_T_Resume.docx"
+                download="Varsha_T_Resume.docx"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-xs sm:text-sm text-primary transition-colors hover:scale-105"
               >
-                <Mail className="w-4 h-4 text-[#89AACC]" />
+                <FileText className="w-4 h-4 text-[#89AACC]" />
+                <span>Download Word (.docx)</span>
+              </a>
+
+              <a
+                href={`mailto:${personalData.email}?subject=Resume%20Inquiry%20-%20Varsha%20T.`}
+                className="inline-flex items-center gap-2 px-4 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-muted hover:text-primary transition-colors"
+              >
+                <Mail className="w-4 h-4" />
                 <span>Request via Email</span>
               </a>
             </div>
