@@ -16,7 +16,6 @@ export default function Projects() {
     "AI & Network Intelligence",
     "Computer Vision & Healthcare",
     "Embedded Systems & IoT",
-    "AI & Public Safety",
     "Computer Vision & Python"
   ];
 

@@ -48,7 +48,6 @@ export const personalData = {
     location: "Anekal, Bangalore",
     batch: "2024–2028",
     currentSemester: "5th Semester",
-    cgpa: "7.3",
     expectedGraduation: "2028",
     focusAreas: [
       "Artificial Intelligence Principles",

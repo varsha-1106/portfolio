@@ -59,7 +59,7 @@ export default function Education() {
                   </span>
                   <span>•</span>
                   <span className="text-emerald-400 font-semibold">
-                    Current: {education.currentSemester} (CGPA: 7.3)
+                    Current: {education.currentSemester}
                   </span>
                 </div>
               </div>

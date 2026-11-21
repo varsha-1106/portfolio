@@ -62,9 +62,9 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: "smart-mine-detection-footwear",
+    id: "smart-safety-footwear",
     number: "03",
-    title: "Smart Mine Detection Footwear",
+    title: "Adaptive AI Based Smart Safety Footwear",
     subtitle: "Wearable safety exploration leveraging embedded hardware and sensory alerts",
     category: "Embedded Systems & IoT",
     status: "Mini-Project",
@@ -92,38 +92,8 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: "emergency-assist-system",
-    number: "04",
-    title: "AI-Powered Emergency Assist System",
-    subtitle: "Automated alert dispatch and intelligent triage workflow for rapid crisis response",
-    category: "AI & Public Safety",
-    status: "Hackathon Prototype",
-    period: "Hackathon Project",
-    problemStatement:
-      "During critical road accidents or medical emergencies, response times lengthen due to manual reporting bottlenecks and ambiguous location or condition data.",
-    proposedSolution:
-      "A conceptual rapid-response framework that triggers automated alert dissemination, prioritizes dispatch notifications based on preliminary incident factors, and routes critical data to the nearest responders.",
-    myContribution:
-      "Contributed to response workflow modeling, designed user experience wireframes, and prepared data payload schemas for emergency broadcasts.",
-    technologies: ["System Workflow Modeling", "Notification Logic", "UI/UX Wireframing", "Python (Exploration)"],
-    challenges:
-      "Minimizing false triggers while maintaining high reliability in low-connectivity conditions.",
-    learningOutcomes: [
-      "Understanding mission-critical software reliability requirements",
-      "Designing clean, panic-resilient user interfaces",
-      "Presenting high-urgency utility solutions to hackathon juries"
-    ],
-    githubUrl: "https://github.com/varsha-1106",
-    visualType: "emergency-alert",
-    keyMetrics: [
-      { label: "Context", value: "Competitive Hackathon" },
-      { label: "Mission", value: "Rapid Crisis Response" },
-      { label: "Status", value: "Prototype Design" }
-    ]
-  },
-  {
     id: "colour-name-recognizer",
-    number: "05",
+    number: "04",
     title: "Colour Name Recognizer",
     subtitle: "Interactive computer vision tool translating RGB pixel inputs into precise nomenclature",
     category: "Computer Vision & Python",

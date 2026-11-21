@@ -5,7 +5,6 @@ import Image from "next/image";
 import { personalData } from "@/data/personal";
 import {
   NetworkGraphPreview,
-  PoseTrackingPreview,
   AcademicBadgePreview,
 } from "./HeroVisualCards";
 import {
@@ -189,16 +188,7 @@ export default function Hero() {
               <NetworkGraphPreview />
             </motion.div>
 
-            {/* Floating Interface 2: Vision Tracking (Bottom-Left / Offset) */}
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-6 -left-4 sm:-left-8 hidden sm:block z-30"
-            >
-              <PoseTrackingPreview />
-            </motion.div>
-
-            {/* Floating Interface 3: Academic Badge (Top-Left / Offset) */}
+            {/* Floating Interface 2: Academic Badge (Top-Left / Offset) */}
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
