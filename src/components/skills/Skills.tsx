@@ -21,10 +21,10 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 md:py-32 relative border-t border-white/5">
+    <section id="skills" className="py-16 sm:py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 mb-10 sm:mb-16">
           <div>
             <div className="inline-flex items-center gap-2 mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-[#89AACC]" />
@@ -32,7 +32,7 @@ export default function Skills() {
                 Active Capabilities & Growth
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display italic text-primary">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display italic text-primary">
               My technical toolkit.
             </h2>
             <p className="mt-2 text-sm sm:text-base text-muted max-w-xl">
@@ -47,11 +47,11 @@ export default function Skills() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {personalData.skills.map((category, catIdx) => (
             <div
               key={catIdx}
-              className={`rounded-2xl sm:rounded-3xl p-6 sm:p-7 bg-[#121212] border border-white/5 hover:border-white/15 transition-all duration-300 flex flex-col justify-between ${
+              className={`rounded-2xl sm:rounded-3xl p-4 sm:p-7 bg-[#121212] border border-white/5 hover:border-white/15 transition-all duration-300 flex flex-col justify-between ${
                 catIdx === personalData.skills.length - 1
                   ? "md:col-span-2 lg:col-span-2 bg-gradient-to-br from-[#121212] to-[#161616]"
                   : ""
@@ -63,7 +63,7 @@ export default function Skills() {
                     {getCategoryIcon(catIdx)}
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-primary font-display">
+                    <h3 className="text-base sm:text-lg font-semibold text-primary font-display break-words">
                       {category.title}
                     </h3>
                     <p className="text-xs text-muted leading-tight">
@@ -77,10 +77,10 @@ export default function Skills() {
                   {category.skills.map((skill, sIdx) => (
                     <div
                       key={sIdx}
-                      className="p-3 rounded-xl bg-[#161616]/70 border border-white/5 hover:border-[#89AACC]/20 transition-all"
+                      className="p-2.5 sm:p-3 rounded-xl bg-[#161616]/70 border border-white/5 hover:border-[#89AACC]/20 transition-all"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-semibold text-primary">
+                      <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+                        <span className="text-sm font-semibold text-primary break-words">
                           {skill.name}
                         </span>
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/5 text-[#89AACC] border border-white/5">
@@ -95,7 +95,7 @@ export default function Skills() {
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-muted">
+              <div className="mt-6 pt-4 border-t border-white/5 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-muted">
                 <span>Practicing regularly</span>
                 <span className="text-[#89AACC]">Active Focus</span>
               </div>

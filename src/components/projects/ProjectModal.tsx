@@ -37,7 +37,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.22 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/85 backdrop-blur-md overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-2 sm:p-6 md:p-10 bg-black/85 backdrop-blur-md overflow-y-auto"
     >
       {/* Click outside backdrop */}
       <div className="fixed inset-0" onClick={onClose} aria-hidden="true" />
@@ -49,16 +49,16 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         exit={{ opacity: 0, y: 12, scale: 0.985 }}
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         data-lenis-prevent
-        className="relative w-full max-w-4xl max-h-[90vh] bg-[#121212] border border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl overflow-y-auto z-10 flex flex-col"
+        className="relative w-full max-w-4xl max-h-[94dvh] sm:max-h-[90vh] bg-[#121212] border border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl overflow-y-auto overscroll-contain z-10 flex flex-col"
       >
         {/* Sticky Header Bar */}
-        <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-[#121212]/95 backdrop-blur-md border-b border-white/5">
-          <div className="flex items-center gap-3">
+        <div className="sticky top-0 z-20 flex items-center justify-between gap-2 px-4 sm:px-6 py-3 sm:py-4 bg-[#121212]/95 backdrop-blur-md border-b border-white/5">
+          <div className="flex min-w-0 items-center gap-2 sm:gap-3">
             <span className="font-mono text-xs text-[#89AACC] font-semibold">
               PROJECT {project.number}
             </span>
             <span className="text-white/20">/</span>
-            <span className="text-xs text-muted font-medium">{project.category}</span>
+            <span className="max-w-[42vw] truncate text-xs text-muted font-medium sm:max-w-none">{project.category}</span>
           </div>
 
           <button
@@ -71,7 +71,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 sm:p-8 space-y-8">
+        <div className="min-w-0 p-4 sm:p-8 space-y-6 sm:space-y-8">
           {/* Title & Status */}
           <div>
             <div className="flex flex-wrap items-center gap-3 mb-3">
@@ -82,7 +82,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <span className="text-xs text-muted font-mono">{project.period}</span>
               )}
             </div>
-            <h2 className="text-2xl sm:text-4xl font-display italic text-primary leading-tight">
+            <h2 className="text-xl sm:text-4xl font-display italic text-primary leading-tight break-words">
               {project.title}
             </h2>
             <p className="mt-2 text-sm sm:text-base text-muted leading-relaxed">

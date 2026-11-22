@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-white/5 py-12 text-xs text-muted">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-5 sm:gap-6">
         {/* Brand & Identity */}
         <div className="flex items-center gap-3">
           <div className="w-7 h-7 rounded-full p-[1px] bg-gradient-to-r from-[#89AACC] to-[#4E85BF]">

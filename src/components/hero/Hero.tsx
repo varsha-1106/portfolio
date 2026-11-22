@@ -19,10 +19,10 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 md:py-28 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-24 pb-14 sm:pb-16 md:py-28 overflow-hidden"
     >
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-8 items-center">
           {/* Left Column: Editorial Headline & Identity */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -33,7 +33,7 @@ export default function Hero() {
             {/* Eyebrow Label */}
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#89AACC]" />
-              <span className="text-[11px] sm:text-xs font-semibold tracking-[0.25em] text-[#89AACC] uppercase font-mono">
+              <span className="text-[10px] sm:text-xs font-semibold tracking-[0.15em] sm:tracking-[0.25em] text-[#89AACC] uppercase font-mono">
                 {personalData.heroEyebrow}
               </span>
             </div>
@@ -45,7 +45,7 @@ export default function Hero() {
 
             {/* Professional Title & Sub-headline */}
             <div className="mb-6">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-display text-primary/95 font-medium leading-snug">
+              <h2 className="text-lg sm:text-2xl lg:text-3xl font-display text-primary/95 font-medium leading-snug">
                 &ldquo;{personalData.tagline}&rdquo;
               </h2>
               <p className="mt-2 text-sm sm:text-base font-medium text-[#89AACC] tracking-wide">
@@ -59,7 +59,7 @@ export default function Hero() {
             </p>
 
             {/* Badges: Location & Availability */}
-            <div className="flex flex-wrap items-center gap-3 mb-8">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-7 sm:mb-8">
               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-muted">
                 <MapPin className="w-3.5 h-3.5 text-[#89AACC]" />
                 <span>{personalData.location}</span>
@@ -72,10 +72,10 @@ export default function Hero() {
             </div>
 
             {/* CTA Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary text-[#0A0A0A] font-semibold text-xs sm:text-sm transition-all duration-300 hover:bg-white hover:scale-[1.02] shadow-lg shadow-white/5"
+                className="group inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full bg-primary text-[#0A0A0A] font-semibold text-xs sm:text-sm transition-all duration-300 hover:bg-white hover:scale-[1.02] shadow-lg shadow-white/5"
               >
                 <span>Explore My Work</span>
                 <ArrowDown className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" />
@@ -83,7 +83,7 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#141414] hover:bg-[#1A1A1A] border border-white/15 text-primary font-medium text-xs sm:text-sm transition-all duration-300 hover:border-[#89AACC]/50"
+                className="inline-flex items-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 rounded-full bg-[#141414] hover:bg-[#1A1A1A] border border-white/15 text-primary font-medium text-xs sm:text-sm transition-all duration-300 hover:border-[#89AACC]/50"
               >
                 <span>Let&apos;s Connect</span>
                 <Mail className="w-4 h-4 text-[#89AACC]" />
@@ -93,7 +93,7 @@ export default function Hero() {
                 href={personalData.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-muted hover:text-primary transition-all duration-300"
+                className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-3 sm:py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-muted hover:text-primary transition-all duration-300"
                 aria-label="View GitHub Profile"
               >
                 <Github className="w-4 h-4" />

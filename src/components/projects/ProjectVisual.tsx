@@ -25,7 +25,7 @@ export default function ProjectVisual({ type, title }: ProjectVisualProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="relative h-64 w-full overflow-hidden rounded-xl border border-white/10 bg-[#0D0D0D]"
+      className="relative h-52 w-full overflow-hidden rounded-xl border border-white/10 bg-[#0D0D0D] sm:h-64"
     >
       <motion.div
         className="absolute -inset-[2%]"

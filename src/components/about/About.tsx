@@ -14,23 +14,23 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 md:py-32 relative border-t border-white/5">
+    <section id="about" className="py-16 sm:py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col items-start mb-16">
+        <div className="flex flex-col items-start mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#89AACC]" />
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#89AACC]">
               Perspective & Purpose
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display italic text-primary">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display italic text-primary">
             {personalData.about.heading}
           </h2>
         </div>
 
         {/* Editorial Layout: Two Columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Left Column: Narrative & Philosophy */}
           <div className="lg:col-span-7 flex flex-col gap-6 text-muted leading-relaxed text-base sm:text-lg">
             {personalData.about.paragraphs.map((p, idx) => (

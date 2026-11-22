@@ -8,17 +8,17 @@ export default function Education() {
   const { education } = personalData;
 
   return (
-    <section id="education" className="py-24 md:py-32 relative border-t border-white/5">
+    <section id="education" className="py-16 sm:py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col items-start mb-16">
+        <div className="flex flex-col items-start mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#89AACC]" />
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#89AACC]">
               Academic Foundation
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display italic text-primary">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display italic text-primary">
             Curriculum & Credentials.
           </h2>
           <p className="mt-2 text-sm sm:text-base text-muted max-w-xl">
@@ -27,7 +27,7 @@ export default function Education() {
         </div>
 
         {/* Education Highlight Card */}
-        <div className="rounded-3xl bg-[#121212] border border-white/10 p-8 sm:p-10 relative overflow-hidden shadow-2xl">
+        <div className="rounded-2xl sm:rounded-3xl bg-[#121212] border border-white/10 p-5 sm:p-10 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#4E85BF]/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
@@ -70,7 +70,7 @@ export default function Education() {
             </div>
 
             {/* Core Course Modules */}
-            <div className="lg:col-span-5 bg-[#161616] p-6 rounded-2xl border border-white/5">
+            <div className="lg:col-span-5 bg-[#161616] p-4 sm:p-6 rounded-2xl border border-white/5">
               <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#89AACC] mb-4">
                 <BookOpen className="w-4 h-4" />
                 <span>Foundational Coursework</span>

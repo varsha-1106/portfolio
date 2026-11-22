@@ -48,9 +48,9 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 md:pt-6 transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 pt-3 sm:pt-4 md:pt-6 transition-all duration-300">
       <nav
-        className={`w-full max-w-5xl flex items-center justify-between px-4 md:px-6 py-2.5 rounded-full transition-all duration-300 ${
+        className={`w-full max-w-5xl flex items-center justify-between px-3 sm:px-4 md:px-6 py-2.5 rounded-full transition-all duration-300 ${
           isScrolled
             ? "bg-[#141414]/90 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/60 py-2"
             : "bg-[#141414]/60 backdrop-blur-sm border border-white/5"
@@ -115,7 +115,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-1.5 text-muted hover:text-primary md:hidden focus:outline-none"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-muted hover:text-primary md:hidden focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

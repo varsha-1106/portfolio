@@ -42,17 +42,17 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 relative border-t border-white/5">
+    <section id="contact" className="py-16 sm:py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#89AACC]" />
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#89AACC]">
               Get in Touch
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display italic text-primary leading-tight">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display italic text-primary leading-tight">
             Let&apos;s build something meaningful.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-muted leading-relaxed">
@@ -60,11 +60,11 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Direct Details Column */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             {/* Email Card with Copy button */}
-            <div className="p-6 rounded-2xl bg-[#121212] border border-white/5 flex flex-col gap-3">
+            <div className="p-4 sm:p-6 rounded-2xl bg-[#121212] border border-white/5 flex flex-col gap-3">
               <span className="text-[11px] font-mono text-muted uppercase tracking-wider">
                 Direct Email
               </span>
@@ -101,7 +101,7 @@ export default function Contact() {
                 href={personalData.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-5 rounded-2xl bg-[#121212] hover:bg-[#151515] border border-white/5 hover:border-white/15 transition-all flex items-center justify-between"
+                className="group p-4 sm:p-5 rounded-2xl bg-[#121212] hover:bg-[#151515] border border-white/5 hover:border-white/15 transition-all flex items-center justify-between"
               >
                 <div className="flex items-center gap-3">
                   <Linkedin className="w-5 h-5 text-[#89AACC]" />
@@ -114,7 +114,7 @@ export default function Contact() {
                 href={personalData.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-5 rounded-2xl bg-[#121212] hover:bg-[#151515] border border-white/5 hover:border-white/15 transition-all flex items-center justify-between"
+                className="group p-4 sm:p-5 rounded-2xl bg-[#121212] hover:bg-[#151515] border border-white/5 hover:border-white/15 transition-all flex items-center justify-between"
               >
                 <div className="flex items-center gap-3">
                   <Github className="w-5 h-5 text-[#89AACC]" />
@@ -132,7 +132,7 @@ export default function Contact() {
           </div>
 
           {/* Form Column */}
-          <div className="lg:col-span-7 bg-[#121212] border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl">
+          <div className="lg:col-span-7 min-w-0 bg-[#121212] border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-2xl">
             <h3 className="text-xl font-display italic text-primary mb-2">
               Send a Message
             </h3>

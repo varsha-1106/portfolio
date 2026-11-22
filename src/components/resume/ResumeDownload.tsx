@@ -33,9 +33,9 @@ export default function ResumeDownload() {
   };
 
   return (
-    <section id="resume" className="py-24 md:py-32 relative border-t border-white/5">
+    <section id="resume" className="py-16 sm:py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-b from-[#141414] to-[#0E0E0E] border border-white/10 p-8 sm:p-12 relative overflow-hidden shadow-2xl">
+        <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#141414] to-[#0E0E0E] border border-white/10 p-5 sm:p-12 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#4E85BF]/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-3xl">
@@ -44,7 +44,7 @@ export default function ResumeDownload() {
               <span>Curriculum Vitae</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-display italic text-primary leading-tight mb-4">
+            <h2 className="text-2xl sm:text-5xl font-display italic text-primary leading-tight mb-4">
               Download Formal Resume.
             </h2>
 
@@ -52,11 +52,11 @@ export default function ResumeDownload() {
               A comprehensive summary of my academic foundation at Sri Sairam College of Engineering, hackathon participations (including Smart India Hackathon), coursework in AI/ML, and technical projects.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <a
                 href="/resume.pdf"
                 download="Varsha_T_Resume.pdf"
-                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-primary text-[#0A0A0A] font-semibold text-xs sm:text-sm hover:bg-white transition-all shadow-lg hover:scale-105"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2.5 px-5 sm:px-6 py-3.5 rounded-full bg-primary text-[#0A0A0A] font-semibold text-xs sm:text-sm hover:bg-white transition-all shadow-lg hover:scale-105"
               >
                 <Download className="w-4 h-4 text-[#4E85BF]" />
                 <span>Download Resume (PDF)</span>
@@ -65,7 +65,7 @@ export default function ResumeDownload() {
               <a
                 href="/Varsha_T_Resume.docx"
                 download="Varsha_T_Resume.docx"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-xs sm:text-sm text-primary transition-colors hover:scale-105"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 text-xs sm:text-sm text-primary transition-colors hover:scale-105"
               >
                 <FileText className="w-4 h-4 text-[#89AACC]" />
                 <span>Download Word (.docx)</span>
@@ -73,7 +73,7 @@ export default function ResumeDownload() {
 
               <a
                 href={`mailto:${personalData.email}?subject=Resume%20Inquiry%20-%20Varsha%20T.`}
-                className="inline-flex items-center gap-2 px-4 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-muted hover:text-primary transition-colors"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-4 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-muted hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 <span>Request via Email</span>

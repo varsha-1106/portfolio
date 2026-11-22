@@ -81,10 +81,10 @@ export default function GithubFeed() {
   }, []);
 
   return (
-    <section id="github" className="py-24 md:py-32 relative border-t border-white/5">
+    <section id="github" className="py-16 sm:py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 mb-9 sm:mb-12">
           <div>
             <div className="inline-flex items-center gap-2 mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-[#89AACC]" />
@@ -92,7 +92,7 @@ export default function GithubFeed() {
                 Open Source & Code
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display italic text-primary">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display italic text-primary">
               GitHub Repositories.
             </h2>
             <p className="mt-2 text-sm sm:text-base text-muted max-w-xl">
@@ -113,12 +113,12 @@ export default function GithubFeed() {
         </div>
 
         {/* Repositories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {loading ? (
             Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
-                className="p-6 rounded-2xl bg-[#121212] border border-white/5 animate-pulse h-44 flex flex-col justify-between"
+                className="p-4 sm:p-6 rounded-2xl bg-[#121212] border border-white/5 animate-pulse h-44 flex flex-col justify-between"
               >
                 <div className="h-4 bg-white/10 rounded w-3/4 mb-3" />
                 <div className="h-3 bg-white/5 rounded w-full mb-2" />
@@ -133,7 +133,7 @@ export default function GithubFeed() {
                 href={repo.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-6 rounded-2xl bg-[#121212] hover:bg-[#151515] border border-white/5 hover:border-white/15 transition-all duration-300 flex flex-col justify-between"
+                className="group p-4 sm:p-6 rounded-2xl bg-[#121212] hover:bg-[#151515] border border-white/5 hover:border-white/15 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">

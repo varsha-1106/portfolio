@@ -6,11 +6,11 @@ import { Sparkles, TrendingUp, Compass, CheckCircle2 } from "lucide-react";
 
 export default function Journey() {
   return (
-    <section id="journey" className="py-24 md:py-32 relative border-t border-white/5">
+    <section id="journey" className="py-16 sm:py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section 1: Learning Journey ("Currently growing.") */}
-        <div className="mb-24">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="mb-16 sm:mb-24">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 mb-9 sm:mb-12">
             <div>
               <div className="inline-flex items-center gap-2 mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#89AACC]" />
@@ -18,7 +18,7 @@ export default function Journey() {
                   Learning Roadmap
                 </span>
               </div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display italic text-primary">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display italic text-primary">
                 Currently growing.
               </h2>
               <p className="mt-2 text-sm sm:text-base text-muted max-w-xl">
@@ -33,11 +33,11 @@ export default function Journey() {
           </div>
 
           {/* Growth Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {personalData.learningRoadmap.map((item, idx) => (
               <div
                 key={idx}
-                className="p-5 rounded-2xl bg-[#121212] border border-white/5 hover:border-white/15 transition-all duration-300 flex flex-col justify-between"
+                className="p-4 sm:p-5 rounded-2xl bg-[#121212] border border-white/5 hover:border-white/15 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -67,7 +67,7 @@ export default function Journey() {
                 Evolution
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display italic text-primary">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-display italic text-primary">
               From curiosity to creation.
             </h2>
             <p className="mt-2 text-sm sm:text-base text-muted max-w-lg">
@@ -76,7 +76,7 @@ export default function Journey() {
           </div>
 
           {/* Timeline Milestones */}
-          <div className="relative border-l border-white/10 ml-4 sm:ml-6 pl-6 sm:pl-8 space-y-10">
+          <div className="relative border-l border-white/10 ml-4 sm:ml-6 pl-5 sm:pl-8 space-y-6 sm:space-y-10">
             {personalData.journeyMilestones.map((m, idx) => (
               <div key={idx} className="relative group">
                 {/* Node indicator */}
@@ -84,13 +84,13 @@ export default function Journey() {
                   <div className="w-1.5 h-1.5 rounded-full bg-[#4E85BF]" />
                 </div>
 
-                <div className="p-6 rounded-2xl bg-[#141414] border border-white/5 group-hover:border-white/15 transition-all">
-                  <div className="flex items-center gap-3 mb-2">
+                <div className="p-4 sm:p-6 rounded-2xl bg-[#141414] border border-white/5 group-hover:border-white/15 transition-all">
+                  <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 sm:gap-3">
                     <span className="font-mono text-xs text-[#89AACC] font-semibold">
                       STAGE {m.phase}
                     </span>
                     <span className="text-white/20">/</span>
-                    <h3 className="text-lg sm:text-xl font-display italic text-primary font-medium">
+                    <h3 className="min-w-0 break-words text-base sm:text-xl font-display italic text-primary font-medium">
                       {m.title}
                     </h3>
                   </div>
