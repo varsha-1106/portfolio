@@ -33,7 +33,7 @@ export default function ResumeDownload() {
   };
 
   return (
-    <section id="resume" className="py-24 md:py-32 bg-[#0A0A0A] relative border-t border-white/5">
+    <section id="resume" className="py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-gradient-to-b from-[#141414] to-[#0E0E0E] border border-white/10 p-8 sm:p-12 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#4E85BF]/10 rounded-full blur-3xl pointer-events-none" />

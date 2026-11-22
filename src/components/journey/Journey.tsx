@@ -6,7 +6,7 @@ import { Sparkles, TrendingUp, Compass, CheckCircle2 } from "lucide-react";
 
 export default function Journey() {
   return (
-    <section id="journey" className="py-24 md:py-32 bg-[#0A0A0A] relative border-t border-white/5">
+    <section id="journey" className="py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section 1: Learning Journey ("Currently growing.") */}
         <div className="mb-24">
@@ -22,7 +22,7 @@ export default function Journey() {
                 Currently growing.
               </h2>
               <p className="mt-2 text-sm sm:text-base text-muted max-w-xl">
-                I&apos;m actively strengthening my coding fundamentals, exploring AI/ML concepts, improving my problem-solving skills, and learning by building projects.
+                I&apos;m building across full-stack development, GenAI, agent workflows, and automation while deepening my AI/ML engineering practice.
               </p>
             </div>
 

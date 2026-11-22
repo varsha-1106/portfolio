@@ -8,7 +8,7 @@ export default function Education() {
   const { education } = personalData;
 
   return (
-    <section id="education" className="py-24 md:py-32 bg-[#0A0A0A] relative border-t border-white/5">
+    <section id="education" className="py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col items-start mb-16">

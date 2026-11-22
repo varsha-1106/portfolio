@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Project } from "@/types";
 import ProjectVisual from "./ProjectVisual";
 import { X, ExternalLink, Github, CheckCircle2, AlertCircle, Layers, Target, Compass, Sparkles } from "lucide-react";
@@ -27,15 +28,29 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     };
   }, [project, onClose]);
 
-  if (!project) return null;
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/85 backdrop-blur-md overflow-y-auto">
+    <AnimatePresence>
+      {project && (
+    <motion.div
+      key="project-detail-backdrop"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.22 }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/85 backdrop-blur-md overflow-y-auto"
+    >
       {/* Click outside backdrop */}
       <div className="fixed inset-0" onClick={onClose} aria-hidden="true" />
 
       {/* Modal Card */}
-      <div className="relative w-full max-w-4xl max-h-[90vh] bg-[#121212] border border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl overflow-y-auto z-10 flex flex-col">
+      <motion.div
+        initial={{ opacity: 0, y: 22, scale: 0.985 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 12, scale: 0.985 }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        data-lenis-prevent
+        className="relative w-full max-w-4xl max-h-[90vh] bg-[#121212] border border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl overflow-y-auto z-10 flex flex-col"
+      >
         {/* Sticky Header Bar */}
         <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-[#121212]/95 backdrop-blur-md border-b border-white/5">
           <div className="flex items-center gap-3">
@@ -214,7 +229,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </button>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
+      )}
+    </AnimatePresence>
   );
 }

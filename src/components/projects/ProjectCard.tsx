@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import { Project } from "@/types";
 import ProjectVisual from "./ProjectVisual";
 import { ArrowUpRight, Github, Sparkles } from "lucide-react";
@@ -11,8 +12,49 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, onOpenDetails }: ProjectCardProps) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const card = cardRef.current;
+    if (
+      !card ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !window.matchMedia("(hover: hover) and (pointer: fine)").matches
+    ) {
+      return;
+    }
+
+    gsap.set(card, { transformPerspective: 1100, transformStyle: "preserve-3d" });
+    const rotateX = gsap.quickTo(card, "rotationX", { duration: 0.45, ease: "power3.out" });
+    const rotateY = gsap.quickTo(card, "rotationY", { duration: 0.45, ease: "power3.out" });
+    const onPointerMove = (event: PointerEvent) => {
+      const bounds = card.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      rotateX(y * -3);
+      rotateY(x * 3);
+    };
+    const onPointerLeave = () => {
+      rotateX(0);
+      rotateY(0);
+    };
+
+    card.addEventListener("pointermove", onPointerMove);
+    card.addEventListener("pointerleave", onPointerLeave);
+    return () => {
+      card.removeEventListener("pointermove", onPointerMove);
+      card.removeEventListener("pointerleave", onPointerLeave);
+      gsap.killTweensOf(card);
+      gsap.set(card, { clearProps: "transform" });
+    };
+  }, []);
+
   return (
-    <div className="group relative rounded-2xl sm:rounded-3xl bg-[#121212] hover:bg-[#151515] border border-white/5 hover:border-white/15 transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between overflow-hidden shadow-xl shadow-black/40">
+    <div
+      ref={cardRef}
+      data-motion-card
+      className="group relative rounded-2xl sm:rounded-3xl bg-[#121212] hover:bg-[#151515] border border-white/5 hover:border-white/15 transition-colors duration-300 p-6 sm:p-7 flex flex-col justify-between overflow-hidden shadow-xl shadow-black/40"
+    >
       {/* Top Meta Bar */}
       <div>
         <div className="flex items-center justify-between mb-4">
@@ -41,7 +83,7 @@ export default function ProjectCard({ project, onOpenDetails }: ProjectCardProps
         </p>
 
         {/* Abstract Architectural Visualization */}
-        <div className="w-full mb-5 transition-transform duration-300 group-hover:scale-[1.01]">
+        <div data-motion-parallax="0.16" className="w-full mb-5 transition-transform duration-300 group-hover:scale-[1.01]">
           <ProjectVisual type={project.visualType} title={project.title} />
         </div>
 

@@ -21,7 +21,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 md:py-32 bg-[#0A0A0A] relative border-t border-white/5">
+    <section id="skills" className="py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
@@ -36,13 +36,13 @@ export default function Skills() {
               My technical toolkit.
             </h2>
             <p className="mt-2 text-sm sm:text-base text-muted max-w-xl">
-              Authentic foundations currently being cultivated through engineering coursework, project experimentation, and dedicated practice.
+              A growing engineering toolkit across full-stack applications, GenAI, agent orchestration, automation, and event-driven systems.
             </p>
           </div>
 
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-muted self-start md:self-auto">
             <span className="w-2 h-2 rounded-full bg-[#89AACC] animate-pulse" />
-            <span>Growth Mindset • No Fake Percentages</span>
+            <span>Modern stack · Actively exploring</span>
           </div>
         </div>
 

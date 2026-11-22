@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import MotionProvider from "@/components/motion/MotionProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://varsha-portfolio.vercel.app"),
@@ -59,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,7 +71,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans bg-bg text-primary antialiased min-h-screen selection:bg-[#4E85BF]/30 selection:text-white">
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );

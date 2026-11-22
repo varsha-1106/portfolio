@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { projectsData } from "@/data/projects";
 import { Project } from "@/types";
 import ProjectCard from "./ProjectCard";
@@ -25,7 +26,7 @@ export default function Projects() {
       : projectsData.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-[#0A0A0A] relative border-t border-white/5">
+    <section id="projects" className="py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -67,15 +68,26 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Projects Grid: Alternating Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onOpenDetails={(p) => setActiveModalProject(p)}
-            />
-          ))}
+        {/* Two projects per row on tablet and desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
+          <AnimatePresence initial={false}>
+            {filteredProjects.map((project) => (
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, y: 18, scale: 0.985 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -12, scale: 0.98 }}
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                className="h-full"
+              >
+                <ProjectCard
+                  project={project}
+                  onOpenDetails={(p) => setActiveModalProject(p)}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
 
         {/* Note on Authenticity */}

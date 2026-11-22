@@ -11,10 +11,13 @@ import GithubFeed from "@/components/github/GithubFeed";
 import ResumeDownload from "@/components/resume/ResumeDownload";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
+import GhostBackground from "@/components/hero/GhostBackground";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0A0A0A] text-primary relative selection:bg-[#4E85BF]/30">
+    <main data-motion-root className="relative min-h-screen text-primary selection:bg-[#4E85BF]/30">
+      <GhostBackground />
+
       {/* Floating Pill Navigation */}
       <Navbar />
 

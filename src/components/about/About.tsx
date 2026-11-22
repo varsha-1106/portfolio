@@ -14,7 +14,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-[#0A0A0A] relative border-t border-white/5">
+    <section id="about" className="py-24 md:py-32 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col items-start mb-16">
@@ -48,7 +48,7 @@ export default function About() {
                 &ldquo;{personalData.about.corePhilosophy}&rdquo;
               </p>
               <div className="mt-4 flex items-center gap-2 text-xs font-mono text-[#89AACC]">
-                <span>— Varsha T.</span>
+                <span>VARSHA T.</span>
                 <span className="text-white/20">/</span>
                 <span>Engineering Mindset</span>
               </div>

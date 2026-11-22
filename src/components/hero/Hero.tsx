@@ -1,41 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { personalData } from "@/data/personal";
 import {
-  NetworkGraphPreview,
   AcademicBadgePreview,
 } from "./HeroVisualCards";
 import {
   ArrowDown,
   ArrowUpRight,
   MapPin,
-  Sparkles,
   Github,
   Mail,
-  Camera,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const [selectedPhoto, setSelectedPhoto] = useState<"primary" | "glasses">("primary");
-
-  const currentPhotoSrc =
-    selectedPhoto === "primary"
-      ? personalData.profileImages.primary
-      : personalData.profileImages.withGlasses;
-
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 md:py-28 overflow-hidden bg-[#0A0A0A]"
+      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 md:py-28 overflow-hidden"
     >
-      {/* Background Ambience: Subtle Radial Glows & Grid */}
-      <div className="absolute inset-0 pointer-events-none bg-grain opacity-60" />
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#4E85BF]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#89AACC]/5 rounded-full blur-3xl pointer-events-none" />
-
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Editorial Headline & Identity */}
@@ -132,7 +117,8 @@ export default function Hero() {
             <div className="relative w-full max-w-sm sm:max-w-md aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 bg-[#121212]">
               {/* Image element using Varsha's uploaded photo */}
               <Image
-                src={currentPhotoSrc}
+                data-motion-parallax="0.12"
+                src={personalData.profileImages.primary}
                 alt="Varsha T. - Future AI Engineer"
                 fill
                 priority
@@ -144,34 +130,6 @@ export default function Hero() {
               <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/70 to-transparent pointer-events-none" />
               <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl pointer-events-none" />
 
-              {/* Photo Toggle Pill (Switch between Studio Portrait & Executive Glasses) */}
-              <div className="absolute top-4 right-4 z-20">
-                <div className="glass-pill rounded-full p-1 flex items-center gap-1 shadow-lg">
-                  <button
-                    onClick={() => setSelectedPhoto("primary")}
-                    className={`px-2.5 py-1 rounded-full text-[10px] font-medium transition-all ${
-                      selectedPhoto === "primary"
-                        ? "bg-[#89AACC] text-[#0A0A0A] font-semibold"
-                        : "text-muted hover:text-primary"
-                    }`}
-                    title="Studio Portrait"
-                  >
-                    Studio
-                  </button>
-                  <button
-                    onClick={() => setSelectedPhoto("glasses")}
-                    className={`px-2.5 py-1 rounded-full text-[10px] font-medium transition-all ${
-                      selectedPhoto === "glasses"
-                        ? "bg-[#89AACC] text-[#0A0A0A] font-semibold"
-                        : "text-muted hover:text-primary"
-                    }`}
-                    title="Executive Glasses Portrait"
-                  >
-                    Executive
-                  </button>
-                </div>
-              </div>
-
               {/* Subtitle Bar at bottom of portrait */}
               <div className="absolute bottom-4 inset-x-4 z-10 flex items-center justify-between text-xs text-muted/90 font-mono">
                 <span className="text-[11px] text-primary/80">VARSHA T.</span>
@@ -179,16 +137,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating Interface 1: Network Graph (Top-Right / Offset) */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-4 sm:-right-8 hidden sm:block z-30"
-            >
-              <NetworkGraphPreview />
-            </motion.div>
-
-            {/* Floating Interface 2: Academic Badge (Top-Left / Offset) */}
+            {/* Floating Academic Badge */}
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}

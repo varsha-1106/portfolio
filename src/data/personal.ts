@@ -5,12 +5,12 @@ export const personalData = {
   firstName: "Varsha",
   lastName: "T.",
   initials: "VT.",
-  brandTitle: "VARSHA — PORTFOLIO",
+  brandTitle: "VARSHA | PORTFOLIO",
   heroEyebrow: "AI & MACHINE LEARNING ENGINEERING",
-  professionalTitle: "Future AI Engineer | Building Real-World Solutions",
-  tagline: "Turning ideas into intelligent solutions.",
+  professionalTitle: "Third-Year AI/ML Student | GenAI, Agents & Full-Stack",
+  tagline: "Building useful software with AI, data, and automation.",
   shortBio:
-    "I'm an Artificial Intelligence and Machine Learning engineering student exploring technology, developing practical projects, and continuously strengthening my technical skills.",
+    "I'm a third-year Artificial Intelligence and Machine Learning engineering student building practical software across modern web development, generative AI, agent workflows, and automation.",
   location: "Hosur, Tamil Nadu, India",
   phone: "+91 9363750548",
   availability: "Open to learning opportunities, internships and collaborations.",
@@ -20,30 +20,30 @@ export const personalData = {
   github: "https://github.com/varsha-1106",
   resumePath: "/resume.pdf",
   profileImages: {
-    primary: "/images/varsha-profile.png",
+    primary: "/images/varsha-profile-4k.jpg",
     withGlasses: "/images/varsha-profile-glasses.png",
   },
   
   about: {
-    heading: "More than just a student.",
+    heading: "AI ideas, engineered into products.",
     paragraphs: [
-      "I'm a curious, determined, and creative Artificial Intelligence and Machine Learning engineering student who is currently building my technical foundation.",
-      "I'm at the beginning of my coding journey, actively learning programming and improving my practical skills through projects, experimentation, and continuous learning.",
-      "I enjoy exploring technology, developing ideas, participating in technical events, working with teams, and learning how technology can solve real-world problems.",
-      "My goal is to become technically strong, build meaningful intelligent solutions, and grow into a capable AI engineer."
+      "I'm a third-year Artificial Intelligence and Machine Learning engineering student interested in building complete products, from clean web interfaces to intelligent workflows.",
+      "My current toolkit spans Python, TypeScript, React, and Next.js. I am expanding into GenAI and LLM application patterns with LangChain, LangGraph, and retrieval-augmented generation.",
+      "I also explore workflow automation, API integrations, and event-driven systems such as Kafka, connecting models and services into practical end-to-end flows.",
+      "I enjoy turning project briefs into working prototypes, explaining trade-offs clearly, and improving systems through iteration."
     ],
     highlights: [
       { label: "Curious by nature", desc: "Driven to unpack complex systems and explore how AI can solve human problems." },
-      { label: "Determined to improve", desc: "Consistently refining programming fundamentals, logic, and debugging stamina." },
-      { label: "Creative problem-solver", desc: "Approaching challenges with fresh architectural thinking and empathetic design." },
-      { label: "Collaborative team member", desc: "Thriving in hackathons, group presentations, and interdisciplinary coordination." },
-      { label: "Continuous learner", desc: "Actively acquiring new tools, frameworks, and foundational concepts daily." }
+      { label: "Product-minded builder", desc: "Connecting interfaces, APIs, AI capabilities, and data into coherent project workflows." },
+      { label: "AI systems explorer", desc: "Applying machine learning concepts while exploring LLMs, RAG, and agent orchestration." },
+      { label: "Automation focused", desc: "Looking for repeatable workflows that can be connected with tools, APIs, and events." },
+      { label: "Clear communicator", desc: "Documenting project decisions and collaborating in hackathons and academic teams." }
     ],
-    corePhilosophy: "Real innovation doesn't start with knowing every answer—it starts with the courage to ask questions, experiment honestly, and build solutions that matter."
+    corePhilosophy: "Real innovation starts with the courage to ask questions, experiment honestly, and build solutions that matter."
   },
 
   education: {
-    degree: "Bachelor of Engineering — Artificial Intelligence and Machine Learning",
+    degree: "Bachelor of Engineering in Artificial Intelligence and Machine Learning",
     institution: "Sri Sairam College of Engineering",
     location: "Anekal, Bangalore",
     batch: "2024–2028",
@@ -62,47 +62,54 @@ export const personalData = {
   skills: [
     {
       title: "Programming & Data",
-      description: "Core languages and query tools I am actively developing proficiency in.",
+      description: "Languages and interfaces used to build application logic and connect services.",
       skills: [
-        { name: "Python", level: "Beginner / Active Practice", context: "Syntax, logic building, data handling, scripting" },
-        { name: "Java", level: "Beginner", context: "Object-oriented programming concepts & syntax" },
-        { name: "SQL", level: "Basic / Active Practice", context: "Relational database queries, filtering, joins" }
+        { name: "Python", level: "Project & coursework use", context: "Scripting, data handling, and AI/ML project work" },
+        { name: "TypeScript", level: "Building familiarity", context: "Typed application code and frontend development" },
+        { name: "Java", level: "Coursework", context: "Object-oriented programming and application fundamentals" },
+        { name: "SQL", level: "Coursework & practice", context: "Relational queries, filtering, joins, and data modeling" }
       ]
     },
     {
-      title: "Web Technologies",
-      description: "Frontend foundations for presenting interfaces and connecting AI models.",
+      title: "Modern Web Engineering",
+      description: "Building responsive product interfaces and connecting them to application services.",
       skills: [
-        { name: "HTML & CSS", level: "Basic", context: "Semantic page structure, responsive styling, and layout design" }
+        { name: "React", level: "Building", context: "Reusable components, state, and interactive interfaces" },
+        { name: "Next.js", level: "Building", context: "Full-stack React applications and routing" },
+        { name: "HTML & CSS", level: "Applied", context: "Accessible structure, responsive layouts, and styling" },
+        { name: "REST APIs", level: "Integrating", context: "Connecting frontend experiences to backend services" }
       ]
     },
     {
-      title: "Developer Tools & Workflow",
-      description: "Version control and collaborative development workflows.",
+      title: "Generative AI & Agent Systems",
+      description: "Patterns for grounding language models and coordinating multi-step tasks.",
       skills: [
-        { name: "Git", level: "Basic", context: "Version control, branching, committing, and change tracking" },
-        { name: "GitHub", level: "Basic", context: "Repository management, open-source workflow, project hosting" }
+        { name: "Generative AI & LLMs", level: "Applied exploration", context: "Prompt design, model integration, and AI product patterns" },
+        { name: "LangChain", level: "Exploring", context: "Composing model, prompt, and tool workflows" },
+        { name: "LangGraph", level: "Exploring", context: "Stateful, multi-step agent workflows" },
+        { name: "RAG", level: "Building familiarity", context: "Retrieval, grounding, and source-aware responses" }
       ]
     },
     {
-      title: "Development Environments",
-      description: "Primary workspaces where I write, test, and debug code.",
+      title: "Automation & Data Systems",
+      description: "Connecting services and exploring reliable, event-driven workflows.",
       skills: [
-        { name: "Visual Studio Code", level: "Primary IDE", context: "Daily code editor, extensions, terminal workflow" },
-        { name: "Antigravity", level: "AI Agent Workspace", context: "Modern agentic engineering and accelerated development" }
+        { name: "Workflow automation", level: "Exploring", context: "Designing repeatable flows across apps, APIs, and AI tools" },
+        { name: "n8n / Make / Zapier", level: "Exploring", context: "No-code and low-code automation platforms" },
+        { name: "Apache Kafka", level: "Learning", context: "Event streams and asynchronous system design" },
+        { name: "Webhooks & integrations", level: "Building familiarity", context: "Passing events and data between services" }
       ]
     },
     {
-      title: "Areas I'm Exploring",
-      description: "Theoretical and applied domains currently driving my curiosity and project experiments.",
+      title: "AI/ML & Developer Practice",
+      description: "Core engineering practices for prototyping and learning from project work.",
       skills: [
-        { name: "Artificial Intelligence", level: "Core Domain", context: "Intelligent systems, heuristics, agentic behaviors" },
-        { name: "Machine Learning", level: "Core Domain", context: "Supervised/unsupervised models, predictive analysis" },
-        { name: "Computer Vision", level: "Applied Exploration", context: "Image processing, spatial tracking, gesture recognition" },
-        { name: "Software Development", level: "Engineering Practice", context: "Modular architecture, clean code, application lifecycles" },
-        { name: "Data Analysis", level: "Analytical Focus", context: "Data cleaning, statistical reasoning, insights extraction" }
+        { name: "Machine Learning", level: "Academic focus", context: "Model fundamentals, evaluation, and applied problem framing" },
+        { name: "Computer Vision", level: "Project exploration", context: "Image processing and hand-landmark tracking concepts" },
+        { name: "Git & GitHub", level: "Project workflow", context: "Version control, repository management, and collaboration" },
+        { name: "Visual Studio Code", level: "Primary IDE", context: "Editing, terminal workflows, and debugging" }
       ]
-    }
+    },
   ] as SkillCategory[],
 
   activities: [
@@ -174,14 +181,14 @@ export const personalData = {
   ] as ActivityItem[],
 
   learningRoadmap: [
-    { topic: "Python Programming", level: "Building Rigor", description: "Mastering data structures, object-oriented paradigms, and algorithm efficiency.", inProgress: true },
-    { topic: "Coding Fundamentals", level: "Daily Practice", description: "Strengthening logic, recursion, string handling, and problem decomposition.", inProgress: true },
-    { topic: "SQL & Databases", level: "Relational Queries", description: "Designing normalized schemas, complex joins, indexing, and aggregations.", inProgress: true },
-    { topic: "Web Development Basics", level: "Interface Building", description: "Connecting dynamic user interfaces to backend APIs and AI services.", inProgress: true },
-    { topic: "AI & ML Concepts", level: "Theoretical Foundation", description: "Understanding loss functions, gradient descent, feature engineering, and neural architectures.", inProgress: true },
-    { topic: "Practical Projects", level: "Iterative Prototyping", description: "Translating course concepts into tangible, deployable, open-source repositories.", inProgress: true },
-    { topic: "Problem Solving", level: "Algorithmic Stamina", description: "Regular practice on analytical puzzles, competitive tracks, and debugging.", inProgress: true },
-    { topic: "Git & GitHub Workflow", level: "Standard Practice", description: "Maintaining clean branch hygiene, pull requests, semantic commit logs, and documentation.", inProgress: true }
+    { topic: "Full-Stack Product Development", level: "React + Next.js", description: "Building responsive interfaces and connecting them to application APIs.", inProgress: true },
+    { topic: "GenAI Applications", level: "LLM Workflows", description: "Exploring prompt design, model integration, and grounded application patterns.", inProgress: true },
+    { topic: "LangChain & LangGraph", level: "Agent Orchestration", description: "Learning composable chains, stateful graphs, and tool-connected workflows.", inProgress: true },
+    { topic: "Retrieval-Augmented Generation", level: "RAG", description: "Studying document retrieval, context construction, and source-grounded answers.", inProgress: true },
+    { topic: "Workflow Automation", level: "n8n · Make · Zapier", description: "Connecting APIs and everyday tools into repeatable automated flows.", inProgress: true },
+    { topic: "Event-Driven Systems", level: "Apache Kafka", description: "Building understanding of event streams, consumers, and asynchronous processing.", inProgress: true },
+    { topic: "Applied AI/ML", level: "Model Foundations", description: "Strengthening model selection, evaluation, and computer vision fundamentals.", inProgress: true },
+    { topic: "Engineering Delivery", level: "Build · Integrate · Iterate", description: "Using version control, clear documentation, and incremental project delivery.", inProgress: true }
   ] as LearningFocus[],
 
   journeyMilestones: [
